@@ -1,3 +1,5 @@
+/* VARIABLES */
+
 const form = document.querySelector('form');
 const firstName = document.getElementById("first-name");
 const lastName = document.getElementById("last-name");
@@ -12,9 +14,17 @@ const ePhone = document.querySelector(".error-phone");
 const ePass = document.querySelector(".error-pass");
 const submit = document.querySelector("input[type=submit]");
 
+/* FORM EVENT LISTENER */
+
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 });
+
+/* SUBMIT BUTTON EVENT LISTENER */
+
+/* Adds and removes the "hide" class from the error messages based on what is and is not missing
+ from the page and if the password values match each other.
+*/
 
 submit.addEventListener('click', () => {
     if(firstName.value != "") {
@@ -32,4 +42,4 @@ submit.addEventListener('click', () => {
     if(password.value != "" && password.value == passwordConfirm.value) {
         ePass.classList.add("hide");
     }
-})
+});
