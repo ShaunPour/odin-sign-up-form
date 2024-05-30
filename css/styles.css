@@ -46,6 +46,22 @@ defined font family of the Norse font. */
     bottom: 8.5px;
 }
 
+.attribution-div {
+    z-index: 16000;
+    position: absolute;
+    left: 5vw;
+    top: 66vh;
+}
+
+.attribution-div a,.attribution-div {
+    color: #fff;
+    text-decoration: none;
+}
+
+.attribution-div a:hover {
+    color: aqua;
+}
+
 .logo {
     max-width: 90px;
 }
@@ -195,12 +211,20 @@ the specific screen size. */
         max-width: 375px;
         width: 375px;
     }
+
+    .attribution-div {
+        top: 78vh;
+    }
 }
 
 @media (min-width: 414px) {
     form,.img-top,.logo-div {
         max-width: 414px;
         width: 414px;
+    }
+
+    .attribution-div {
+        top: 88vh;
     }
 
     .login-txt {
@@ -229,12 +253,20 @@ the specific screen size. */
         max-width: 520px;
         width: 520px;
     }
+
+    .attribution-div {
+        top: 110vh;
+    }
 }
 
 @media (min-width: 600px) {
     form,.img-top,.logo-div {
         max-width: 600px;
         width: 600px;
+    }
+
+    .attribution-div {
+        top: 130vh;
     }
 
     .login-txt {
@@ -255,6 +287,10 @@ the specific screen size. */
     form,.img-top,.logo-div {
         max-width: 800px;
         width: 800px;
+    }
+
+    .attribution-div {
+        top: 174vh;
     }
 
     .logo-div {
@@ -295,6 +331,11 @@ display of content across the page. */
         left: 0;
         top: 0;
         z-index: 5000;
+    }
+
+    .attribution-div {
+        left: 2vw;
+        top: 95vh;
     }
 
     form {
@@ -359,6 +400,10 @@ both the 1440 and 1920 device sizes. */
 @media (min-width: 1440px) {
     .img-top {
         height: 900px;
+    }
+
+    #title-txt-tertiary {
+        bottom: 13vh;
     }
 }
 
