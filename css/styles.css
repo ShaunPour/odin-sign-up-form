@@ -161,9 +161,15 @@ and removed the underline from it. Also made the link and button inner text defa
     text-decoration: none;
 }
 
+/* LOGIN TEXT */
+
 .login-txt a, input[type="submit"] {
     font-weight: bold;
 }
+
+/* ERRORS */
+
+/* Set error message and border to show as red when visible. */
 
 input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:invalid,input[type="tel"]:invalid {
     border: 0.15em solid red;
@@ -178,8 +184,11 @@ input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:
     opacity: 0;
 }
 
+/* MEDIA QUERIES */
+
 /* Tweaked the width properties of the form, top image and logo container to account for mobile devices
-that are a screen with of 375 rather than 320. */
+that are between 375 and 810 screen width with various tweaks to element orientation based on
+the specific screen size. */
 
 @media (min-width: 375px) {
     form,.img-top,.logo-div {
@@ -264,6 +273,10 @@ that are a screen with of 375 rather than 320. */
     }
 }
 
+/* Set flex direction to row so that the image to form page layout flows from left to right instead
+of top to bottom and modified the z index and positioning on multiple elements to ensure a consistent
+display of content across the page. */
+
 @media (min-width: 1280px) {
     body {
         flex-direction: row;
@@ -339,6 +352,9 @@ that are a screen with of 375 rather than 320. */
         font-size: 25px;
     }
 }
+
+/* Modified primary image height to ensure it stretches across the entire left side of the page for
+both the 1440 and 1920 device sizes. */
 
 @media (min-width: 1440px) {
     .img-top {
