@@ -8,15 +8,70 @@
 </head>
 <body>
     <header>
-
+        <div class="img-div">
+            <div class="logo-div">
+                <img src="img/odin-lined.png" alt="" class="logo">
+                <h2 class="logo-txt">ODIN</h2>
+            </div>
+            <img src="img/halie-west-25xggax4bSA-unsplash.jpg" alt="img-top" class="img-top">
+        </div>
+        <div class="upper">
+        <p class="header-txt" id="title-txt">
+            This is not a real online service! You know you need something
+            like this in your life to help you realize your deepest dreams.
+            Sign up <span>now</span> to get started.
+        </p>
+        <p class="header-txt" id="title-txt-secondary">You <span>know</span> you want to.</p>
+    </div>
+        <p class="header-txt" id="title-txt-tertiary">Let's do this!</p>
     </header>
     <main>
-
+        <form>
+            <fieldset class="name">
+                <div class="fname">
+                    <label for="first-name" class="first-name label-txt" id="first-name-label">FIRST NAME</label>
+                    <input type="text" id="first-name" required>
+                    <p class="error-txt error-first">First Name Required</p>
+                </div>
+                <div class="lname">
+                    <label for="last-name" class="last-name label-txt" id="last-name-label">LAST NAME</label>
+                    <input type="text" id="last-name" required>
+                    <p class="error-txt error-last">Last Name Required</p>
+                </div>
+            </fieldset>
+            <fieldset class="contact">
+                <div class="contact-first">
+                <div class="email-div">
+                    <label for="email-input" class="email-label label-txt" id="email-label">EMAIL</label>
+                    <input type="email" id="email-input" required>
+                    <p class="error-txt error-email">Valid Email Required</p>
+                </div>
+                <div class="phone-div">
+                    <label for="phone-input" class="phone-label label-txt" id="phone-label">PHONE NUMBER</label>
+                    <input type="tel" id="phone-input" required>
+                    <p class="error-txt error-phone">Valid Phone Number Required</p>
+                </div>
+            </div>
+            <div class="contact-second">
+                <div class="password-div">
+                    <label for="password-input" class="password-label label-txt" id="password-label">PASSWORD</label>
+                    <input type="password" id="password-input" required>
+                    <p class="error-txt error-pass">Paasswords do not match</p>
+                </div>
+                <div class="password-div-confirm">
+                    <label for="password-input-confirm" class="password-label-confirm label-txt" id="password-label-confirm">CONFIRM PASSWORD</label>
+                    <input type="password" id="password-input-confirm" required>
+                </div>
+            </div>
+            </fieldset>
+            <input type="submit" value="Create Account">
+        </form>
     </main>
     <footer>
-
+        <p class="login-txt">Already have an account? <a href="#">Log in</a></p>
     </footer>
+    <script src="js/script.js"></script>
 </body>
 </html>
 
-<!-- photo attribution: Photo by <a href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->
+<!-- photo attribution: Photo by <a class="attribution" href="https://unsplash.com/@haliewestphoto?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Halie West</a> on <a href="https://unsplash.com/photos/green-leaf-plant-in-close-up-photography-25xggax4bSA?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a> -->

@@ -1,0 +1,377 @@
+/* Removes default margin and padding from page to start */
+
+** {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Convert base page to flexbox in row configuration so the page now flows from
+top to bottom. Additionally, changed the default page color to match the design so long as I
+alter the form's background color later. */
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.02);
+    padding-bottom: 5em;
+}
+
+/* Set background color to match the design and set form width to 320 pixels so the form itself
+never exceeds the total width of the mobile device. */
+
+form {
+    background-color: rgb(255, 255, 255);
+    max-width: 320px;
+    width: 320px;
+}
+
+/* Add minor left margin spacing to top text so it includes some spacing between the text proper
+and the extreme left hand border of the screen. */
+
+.header-txt {
+    margin-left: 0.3em;
+}
+
+/* Set the image to be a maximum width of 320 pixels, equivalent to the size of the screen in use
+as well as ensuring that image is at the maximum possible height on the screen. Also, set the logo and
+logo text to be centered in the upper part of the image with the text color set to white and a
+defined font family of the Norse font. */
+
+.img-top {
+    max-width: 320px;
+    position: relative;
+    bottom: 8.5px;
+}
+
+.logo {
+    max-width: 90px;
+}
+
+.logo-txt {
+    color: rgb(255, 255, 255);
+    font-size: 4rem;
+}
+
+.logo-div {
+    font-family: "Norse", sans-serif;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 5%;
+    z-index: 5000;
+    background-color: rgba(0, 0, 0, 0.45);
+    max-width: 320px;
+    width: 320px;
+}
+
+/* Hid the fieldset border and set every span on the page to be italic by default. Also
+added some space between the header text and the call to action line just above the form proper. */
+
+fieldset {
+    border: none;
+}
+
+span {
+    font-style: italic;
+}
+
+.upper {
+    padding-bottom: 0.15rem;
+    line-height: 1.25em;
+}
+
+/* Used flexbox to turn each individual div for the label and its' associated input into a column
+direction flex container. Set the align items property to flex-start in order to ensure the label text
+is on the top left of the input rather than centered. */
+
+.fname,.lname, .email-div,.phone-div, .password-div,.password-div-confirm {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+/* Added margin and repositioned several elements in the form to center it and add some width to
+the inputs so they take up more of the page. */
+
+input {
+    width: 65vw;
+    border: none;
+    border: 0.15em solid #E5E7EB;
+}
+
+.fname,.lname, .email-div,.phone-div, .password-div {
+    margin-bottom: 1.05em;
+}
+
+#first-name, #last-name, #email-input, #phone-input, #password-input, #password-input-confirm {
+    margin-bottom: 1.5em;
+}
+
+.error-txt {
+    position: relative;
+    bottom: 1.9em;
+    left: 1.8em;
+}
+
+input,label {
+    position: relative;
+    left: 2em;
+}
+
+.label-txt {
+    margin-bottom: 0.25em;
+}
+
+.login-txt,input[type="submit"] {
+    position: relative;
+}
+
+/* Recolored and filled out the create account button before repositioning it closer to the center
+and removed the default border property. */
+
+input[type="submit"] {
+    background-color: #596D48;
+    color: #fff;
+    padding: 1em 0;
+    width: 60%;
+    border-radius: 5px;
+    border: none;
+    top: 4em;
+    left: 3.4em;
+}
+
+/* Repositioned the text telling the user to log in if they already have an account as it was overlapping
+with the create account button after the modifications to that element. */
+
+.login-txt {
+    top: 4.5em;
+}
+
+/* Changed the text color of the login link to use the bg color of the submit button for its' text color
+and removed the underline from it. Also made the link and button inner text default to bold. */
+
+.login-txt a {
+    color: #596D48;
+    text-decoration: none;
+}
+
+.login-txt a, input[type="submit"] {
+    font-weight: bold;
+}
+
+input[type="text"]:invalid, input[type="email"]:invalid, input[type="password"]:invalid,input[type="tel"]:invalid {
+    border: 0.15em solid red;
+}
+
+.error-txt {
+    color: red;
+    opacity: 100;
+}
+
+.hide {
+    opacity: 0;
+}
+
+/* Tweaked the width properties of the form, top image and logo container to account for mobile devices
+that are a screen with of 375 rather than 320. */
+
+@media (min-width: 375px) {
+    form,.img-top,.logo-div {
+        max-width: 375px;
+        width: 375px;
+    }
+}
+
+@media (min-width: 414px) {
+    form,.img-top,.logo-div {
+        max-width: 414px;
+        width: 414px;
+    }
+
+    .login-txt {
+        right: 1.5em;
+    }
+
+    .fname,.lname, .email-div,.phone-div, .password-div,.password-div-confirm {
+        position: relative;
+        left: 1em;
+    }
+
+    input[type="submit"] {
+        left: 5em;
+    }
+}
+
+@media (min-width: 428px) {
+    form,.img-top,.logo-div {
+        max-width: 428px;
+        width: 428px;
+    }
+}
+
+@media (min-width: 520px) {
+    form,.img-top,.logo-div {
+        max-width: 520px;
+        width: 520px;
+    }
+}
+
+@media (min-width: 600px) {
+    form,.img-top,.logo-div {
+        max-width: 600px;
+        width: 600px;
+    }
+
+    .login-txt {
+        right: 0.9em;
+    }
+
+    .fname,.lname, .email-div,.phone-div, .password-div,.password-div-confirm {
+        position: relative;
+        left: 4em;
+    }
+
+    input[type="submit"] {
+        left: 9em;
+    }
+}
+
+@media (min-width: 800px) {
+    form,.img-top,.logo-div {
+        max-width: 800px;
+        width: 800px;
+    }
+
+    .logo-div {
+        top: 25%;
+    }
+
+    .logo-txt {
+        font-size: 9rem;
+    }
+}
+
+@media (min-width: 810px) {
+    form,.img-top,.logo-div {
+        max-width: 810px;
+        width: 810px;   
+    }
+}
+
+@media (min-width: 1280px) {
+    body {
+        flex-direction: row;
+    }
+
+    .logo-div {
+        width: 32.7vw;
+        height: 25%;
+        z-index: 6000;
+    }
+
+    .img-top {
+        width: 33.33vw;
+        height: 800px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        z-index: 5000;
+    }
+
+    form {
+        width: 66.66vw;
+        position: relative;
+        top: 9em;
+        }
+
+    input[type="text"], input[type="email"], input[type="password"] {
+        width: 90%;
+    }
+
+    input[type="tel"] {
+        width: 85%;
+    }
+
+    input[type="submit"] {
+        width: 40%;
+    }
+
+    .name,.contact-first,.contact-second {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .fname,.lname, .email-div,.phone-div, .password-div,.password-div-confirm {
+        left: -1em;
+        top: 3em;
+    }
+
+    .password-div-confirm {
+        top: 1em;
+    }
+
+    .login-txt {
+        width: 215%;
+        top: 25.5em;
+        right: 15em;
+    }
+
+    #title-txt {
+        width: 100%;
+    }
+
+    #title-txt, #title-txt-secondary, #title-txt-tertiary {
+        position: relative;
+        left: 40vw;
+        bottom: 15vh;
+        z-index: 100000;
+    }
+
+    #title-txt-tertiary {
+        left: 40vw;
+        bottom: 17vh;
+        font-size: 25px;
+    }
+}
+
+@media (min-width: 1440px) {
+    .img-top {
+        height: 900px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .img-top {
+        height: 1080px;
+    }
+
+    form {
+        top: 15em;
+    }
+
+    .login-txt {
+        top: 31em;
+    }
+
+    #title-txt {
+        width: 35%;
+    }
+
+    #title-txt, #title-txt-secondary, #title-txt-tertiary {
+        left: 50vw;
+        bottom: 5vh;
+        z-index: 100000;
+    }
+
+    #title-txt-tertiary {
+        left: 50vw;
+        bottom: 4vh;
+        font-size: 25px;
+    }
+}
